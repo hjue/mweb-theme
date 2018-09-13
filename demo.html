@@ -10,7 +10,9 @@
    <script type="text/javascript" src="asset/jquery_plantuml/jquery.js"></script>
    <script type="text/javascript" src="asset/jquery_plantuml/rawdeflate.js"></script>
    <script type="text/javascript" src="asset/jquery_plantuml/encode64.js"></script>
-    <script src="asset/echarts.common.min.js"></script>
+    <!-- <script src="asset/echarts.common.min.js"></script> -->
+    <script src="asset/echarts-all.js"></script>
+    
     <script src="asset/mermaid.min.js"></script>
     <script type="text/javascript">
     $(function(){    
@@ -34,6 +36,7 @@
           ele.hide();           
           $('<div style="width: 100%;height:400px;" id="'+eleiid+'"></div>').insertAfter(ele);                
           var myChart = echarts.init(document.getElementById(eleiid));
+
           try  {
             eval($(this).text());
             myChart.setOption(option);
